@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>GoBusNow</title>
+    <link rel="icon" href="Img/catLogo.png" type="image/x-icon" />
+</head>
+
+<body>
+    <div class="content">
+        <div class="navgationBar">
+            <div class="navgationFlex">
+                <img class="navigationCatLogo" src="Img/catLogo.png" onclick="catClick()">
+                <a class="navigationTitle">GoBusNow</a>
+                <img class="navigationStoreLogo" src="Img/storeLogo.png" onclick="storeClick()">
+                <img class="navigationFbLogo" src="Img/fbLogo.png" onclick="fbClick()">
+            </div>
+        </div>
+
+        <div class="headerContent">
+            <a class="headerTitle">GoBusNow</a>
+            <div class="headerSubTitle">
+                與你的可愛貓咪共享每一刻，無論在哪裡！<br>
+                即時天氣和交通資訊一鍵掌握，無憂出行！
+            </div>
+            <img class="headerImg" src="Img/bgLogo.png">
+        </div>
+
+        <div class="previewWhiteContent">
+            <img class="previewImg" src="Img/home.png">
+            <div class="previewVStack">
+                <a class="previewTitle">首頁</a><br><br><br><br>
+                <a class="previewText">可以自行選擇<br>全台地區公車及地區天氣</a>
+            </div>
+        </div>
+
+        <div class="previewBlackContent">
+            <div class="previewVStack">
+                <a class="previewTitle">公車列表</a><br><br><br><br>
+                <a class="previewText">所有公車路線列表<br>長按即可加入收藏</a>
+            </div>
+            <img class="previewImg" src="Img/allBus.png">
+        </div>
+
+        <div class="previewWhiteContent">
+            <img class="previewImg" src="Img/detailBus.png">
+            <div class="previewVStack">
+                <div class="previewVStack">
+                    <a class="previewTitle">動態資訊</a><br><br><br><br>
+                    <a class="previewText">公車到站時間動態<br>精準公車站牌位置</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="previewBlackContent">
+            <div class="previewVStack">
+                <a class="previewTitle">問題幫助</a><br><br><br><br>
+                <a class="previewText">小幫手會提供常見問題<br>也可以與他聊天互動</a>
+            </div>
+            <img class="previewImg" src="Img/message.png">
+        </div>
+
+        <div class="previewWhiteContent">
+            <img class="previewImg" src="Img/useCat.png">
+            <div class="previewVStack">
+                <a class="previewTitle">小幫手</a><br><br><br><br>
+                <a class="previewText">選擇您的小幫手<br>讓我們開始吧!</a>
+            </div>
+        </div>
+
+        <div class="hrContent">
+            <div class="hr"></div>
+        </div>
+
+        <div class="describeContent">
+            <h1>【 介紹 】</h1><br>
+            <h2>主要特色</h2>
+            <a class="describeText">精簡明瞭的 UI 設計，及結合全台灣、離島各縣市的所有公車站牌、<br>動態資訊、各縣市的天氣資訊，還有更可愛的貓咪幫手陪著您一起等公車。</a><br><br>
+            <h2>公車資訊</h2>
+            <a class="describeText">提供各地區公車路線及到站動態，可以收藏您喜歡的路線，以便下次快速找查。</a><br><br>
+            <h2>天氣資訊</h2>
+            <a class="describeText">提供各地區當天天氣動態資訊。</a><br><br>
+            <h2>貓咪小幫手</h2>
+            <a class="describeText">可供選擇您的貓咪小幫手，來幫助您解決問題！</a><br><br><br>
+            <h2>準備好了嗎？選擇你的貓咪小幫手，Let's Go Bus Now！</h2><br><br>
+
+        </div>
+
+        <div class="footerContent">
+            <a>
+                客服信箱: helpchong1@gmail.com<br><br>
+                服務時間: 週一到週五 上午9:00 ~ 12:00 下午14:00 ~ 17:00<br><br>
+                版權所有 GoBusNow © 2023 Chong1 All Right Reserved.
+            </a>
+        </div>
+
+        <div id="scrollTop" class="scrollTopBtn" onclick="scrollToTopClick()">
+            <img class="scrollTopImg" src="Img/scrollToTop.png">
+        </div>
+
+    </div>
+</body>
+
+<script>
+
+    const scrollTopElement = document.getElementById('scrollTop');
+
+    window.addEventListener('scroll', () => {
+
+        // 获取页面滚动的垂直距离
+        const scrollY = window.scrollY || window.pageYOffset;
+
+        if (scrollY > 100) {
+            scrollTopElement.style.display = 'flex'
+        } else {
+            scrollTopElement.style.display = 'none'
+        }
+
+    });
+
+</script>
+
+<script>
+
+    function scrollToTopClick() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function catClick() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function storeClick() {
+        window.location.href = "https://apps.apple.com/us/app/gobusnow/id6468967097"
+    }
+
+    function fbClick() {
+        window.location.href = "https://www.facebook.com/profile.php?id=61551574184783"
+    }
+
+</script>
+
+<style>
+    body {
+        padding: 0px;
+        margin: 0px;
+        background-color: black;
+    }
+
+    .scrollTopBtn {
+        cursor: pointer;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        width: 80px;
+        height: 80px;
+        background-color: white;
+        border-radius: 40px;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+        right: 50px;
+        bottom: 40px;
+        display: none;
+    }
+
+    .scrollTopImg {
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+    }
+
+    .hrContent {
+        display: flex;
+        justify-content: center;
+        background-color: white;
+        width: 100%;
+    }
+
+    .hr {
+        width: 90%;
+        height: 1px;
+        background-color: rgb(120, 120, 120);
+        border-radius: 1px;
+    }
+
+    .content {
+        width: 100%;
+        position: absolute;
+    }
+
+    .navgationBar {
+        height: 80px;
+        top: 0px;
+        right: 0px;
+        left: 0px;
+        background-color: rgba(42, 37, 37, 0.8);
+        backdrop-filter: blur(10px);
+        position: fixed;
+        color: white;
+        box-shadow: 0px 0px 16px 0px rgb(0, 0, 0, 0.5);
+    }
+
+    .navgationFlex {
+        display: flex;
+        align-items: center;
+        height: 80px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .navigationTitle {
+        flex: 1;
+        font-size: 30px;
+        font-weight: bold;
+        padding-left: 30px;
+    }
+
+    .navigationCatLogo {
+        cursor: pointer;
+        background-color: white;
+        width: 60px;
+        height: 60px;
+        border-radius: 30px;
+        object-fit: contain;
+    }
+
+    .navigationStoreLogo {
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        padding-right: 30px;
+        object-fit: contain;
+    }
+
+    .navigationFbLogo {
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+    }
+
+    .headerContent {
+        margin-top: 80px;
+        padding-top: 50px;
+        text-align: center;
+        color: white;
+        background-color: black;
+    }
+
+    .headerTitle {
+        font-size: 80px;
+        font-weight: 700;
+        color: white;
+    }
+
+    .headerSubTitle {
+        font-size: 30px;
+        font-weight: 400;
+        color: white;
+    }
+
+    .headerImg {
+        width: 100%;
+        height: 800px;
+        object-fit: contain;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .footerContent {
+        font-size: 12px;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+        background-color: black;
+    }
+
+    .previewWhiteContent {
+        height: 800px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        background-color: white;
+    }
+
+    .previewBlackContent {
+        height: 800px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        background-color: black;
+    }
+
+    .previewVStack {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .previewTitle {
+        font-size: 60px;
+        font-weight: bold;
+        border-bottom: 2px solid;
+    }
+
+    .previewText {
+        font-size: 34px;
+        font-weight: 500;
+    }
+
+    .previewImg {
+        width: 400px;
+        height: 600px;
+        object-fit: contain;
+    }
+
+    .describeContent {
+        font-size: 20px;
+        text-align: center;
+        padding-top: 100px;
+        padding-bottom: 50px;
+        background-color: white;
+    }
+
+    .describeTitle {
+        font-size: 30px;
+        color: black;
+    }
+
+    .describeText {
+        color: rgb(86, 85, 85);
+    }
+</style>
+
+</html>
