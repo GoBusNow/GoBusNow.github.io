@@ -1,19 +1,39 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <meta charset="UTF-8">
-    <title>領養之家跳轉中...</title>
-    <link rel="icon" href="Img/catLogo.png" type="image/x-icon" />
+    <title>Deep Link Redirect</title>
 </head>
-
 <body>
+    <script type="text/javascript">
+        // 在页面加载时获取当前页面的查询参数
+        window.onload = function() {
+            // 获取当前页面的 URL
+            var currentUrl = new URL(window.location.href);
+            // 使用 URLSearchParams 解析查询参数
+            var params = new URLSearchParams(currentUrl.search);
+
+            // 取得所有查询参数并输出到控制台
+            params.forEach(function(value, key) {
+                console.log(key + ': ' + value);
+            });
+
+            // 例如，获取特定的 animal_id 参数
+            var animalId = params.get('animal_id');
+            console.log("Animal ID:", animalId);
+
+            // 尝试打开应用
+            if (animalId) {
+                window.location.href = "anl://gobusnow.github.io/animalRedirect?animal_id=" + animalId;
+            } else {
+                window.location.href = "anl://gobusnow.github.io/animalRedirect";
+            }
+
+            // 如果 2 秒后还没有跳转，重定向到 App Store
+            setTimeout(function() {
+                window.location.href = "https://apps.apple.com/app/idYOUR_APP_ID"; // App Store 下载链接
+            }, 2000); // 延迟 2 秒
+        };
+    </script>
+    <p>Redirecting...</p>
 </body>
-
-<script>
-</script>
-
-<style>
-</style>
-
 </html>
